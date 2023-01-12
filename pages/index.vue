@@ -1,16 +1,22 @@
 <template>
   <article>
-    <h1>{{ page.title }}</h1>
-    <nuxt-content :document="page" />
+    <div v-for="p in pages" :key="p.path">
+      <router-link :to="p.path">
+        <article-card :page="p"></article-card>
+      </router-link>
+    </div>
   </article>
 </template>
 
 <script>
+import ArticleCard from '~/components/ArticleCard.vue';
+
 export default {
-  async asyncData ({ $content }) {
-    const page = await $content('app/git').fetch()
+  components: { ArticleCard },
+  async asyncData ({ $content, route}) {
+    const pages = await $content('app', {deep:true}).sortBy('path').fetch()
     return {
-      page
+      pages
     }
   }
 }
