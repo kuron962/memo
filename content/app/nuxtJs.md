@@ -9,5 +9,5 @@ npx create-nuxt-app hello : helloという名前のnuxt.jsのプロジェクト�
 - 編集したい場合は、プロジェクト直下に「app.html」ファイルを作成し、そこに記載していく
 
 
-##他に勉強すること
+## 他に勉強すること
 vue looter
