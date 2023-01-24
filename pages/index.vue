@@ -14,7 +14,7 @@ import ArticleCard from '~/components/ArticleCard.vue';
 export default {
   components: { ArticleCard },
   async asyncData ({ $content, route}) {
-    const pages = await $content('app', {deep:true}).sortBy('path').fetch()
+    const pages = await $content('article', {deep:true}).sortBy('path').fetch()
     return {
       pages
     }

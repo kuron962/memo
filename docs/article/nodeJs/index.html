@@ -1,0 +1,413 @@
+<!doctype html>
+<html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>memo</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" name="format-detection" content="telephone=no"><base href="/memo/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" href="/memo/_nuxt/8f8421a.js" as="script"><link rel="preload" href="/memo/_nuxt/12bbf66.js" as="script"><link rel="preload" href="/memo/_nuxt/e5ab36a.js" as="script"><link rel="preload" href="/memo/_nuxt/4644cec.js" as="script"><link rel="preload" href="/memo/_nuxt/24c5f03.js" as="script"><style data-vue-ssr-id="e622d370:0 517a8dd7:0 6439d180:0">body{background-color:#fff;color:#494949}code,pre{font-family:Meiryo,Menlo,Monaco,Consolas,"Droid Sans Mono","Courier New",monospace,"Droid Sans Fallback"}blockquote{border-color:#ea5219}h1{border:3px solid #ea5219;padding:.5em;border-radius:.5em}h1,h2{color:#494949;font-weight:700}h2{position:relative;margin:0 0 1.5em;padding:.5em .5em .5em 2.1em;border-bottom:2px solid #ea5219}h2:before{font-size:180%;color:#ea5219;top:.15em;left:.1em}h2:after,h2:before{content:"□";position:absolute;height:12px;width:12px}h2:after{font-size:120%;color:#000;top:.78em;left:0}h3{border-left:6px solid #ea5219}h3,h4{color:#494949;padding:.5em .75em;background-color:#f4f4f4}h4{border-radius:6px}h5{color:#494949;padding:.5em .75em;border-bottom:thin dotted #ea5219}table thead th{background:#ea5219;font-weight:700;vertical-align:top;color:#fff}table td,table th{padding:6px 13px;border:1px solid #ddd}table tr{background-color:#fff;border-top:1px solid #ccc}table tr:nth-child(2n){background-color:#f8f8f8}hr{background-color:#fff;border-color:#ea5219;border-top:1px dashed #ea5219}ul li{padding:0;margin:0;list-style-type:none!important;list-style-image:none!important;margin:5px 0!important;position:relative;padding-left:20px}ul li:after{content:"";display:block;position:absolute;background:#ea5219;width:9px;height:9px;top:5px;left:5px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-o-transform:rotate(-45deg)}ol{counter-reset:li;padding:0;list-style:none}ol li{position:relative;margin:0 0 8px 4em;padding:2px 8px}ol li:before{content:counter(li);counter-increment:li;position:absolute;top:-2px;left:-2em;width:2em;padding:3px 0;color:#fff;background:#ea5219;font-weight:700;text-align:center;border-radius:20px}a{color:#4078c0;text-decoration:none}a:active,a:hover{text-decoration:underline}code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>
+  </head>
+  <body>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><article><div class="nuxt-content"><h1 id="nodejs"><a href="#nodejs" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Node.js</h1>
+<h2 id="nodejs-とは"><a href="#nodejs-%E3%81%A8%E3%81%AF" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Node.js とは</h2>
+<ul>
+<li>JavaScriptをサーバサイドで動かすための環境、仕組み</li>
+<li>非同期処理により、大量のアクセスを高速に裁くことが可能
+<ul>
+<li>
+<h3 id="非同期処理"><a href="#%E9%9D%9E%E5%90%8C%E6%9C%9F%E5%87%A6%E7%90%86" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>非同期処理</h3>
+<ul>
+<li>あるタスクを実行している最中に、その処理を止めることなく別のタスクを実行できる方式</li>
+<li>
+<blockquote>
+<p>並行処理：複数の処理を1つの主体が切り替えながらこなすこと<br></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>並列処理：複数の処理を複数の主体で同時にこなすこと<br>
+同期処理：複数の処理をこなす際、ある処理が別の処理の終了を待つような処理<br>
+非同期処理：複数の処理をこなす際、ある処理は別の処理の終了を待たないような処理<br>
+<br>
+それぞれの言葉の目的<br>
+並行処理：処理を「同時に進行させる」ことが目的<br>
+並列処理：処理を「速くこなすこと」が目的<br>
+同期処理・非同期処理：別の処理を「待つ必要があるか・ないか」を語ることが目的<br>
+<a href="https://qiita.com/kyabetsuda/items/384a57ff6b7250de40ad" rel="nofollow noopener noreferrer" target="_blank">処理方式の違い</a></p>
+<ul>
+<li>モジュール機能により多数のパッケージが後悔されており、様々な機能を簡単に組み込むことが可能</li>
+<li>パッケージやフレームワークはnpmからインストールして使用する</li>
+</ul>
+<h2 id="フォルダ構成"><a href="#%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E6%A7%8B%E6%88%90" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>フォルダ構成</h2>
+<p>list-app(親フォルダ)</p>
+<ul>
+<li>app.js</li>
+<li>views (見た目に関するファイルを置く場所)
+<ul>
+<li>top.ejs (ビューファイル)</li>
+</ul>
+</li>
+<li>public (CSSや画像を置く場所)
+<ul>
+<li>css (CSSを置く場所)</li>
+<li>images (画像を置く場所)</li>
+</ul>
+</li>
+</ul>
+<h2 id="appjsの構成"><a href="#appjs%E3%81%AE%E6%A7%8B%E6%88%90" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>app.jsの構成</h2>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>//expressパッケージの準備
+const express = require('express');
+const app = express();
+
+//publicフォルダ内のファイルを読み込めるように設定
+app.use(express.static('public'));
+
+具体的な処理部分
+
+//サーバ起動
+app.listen(3000);
+</code></pre></div>
+<h3 id="処理部分の主なコード"><a href="#%E5%87%A6%E7%90%86%E9%83%A8%E5%88%86%E3%81%AE%E4%B8%BB%E3%81%AA%E3%82%B3%E3%83%BC%E3%83%89" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>処理部分の主なコード</h3>
+<ul>
+<li>ルーティング
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>app.get('/(URLを記入)', (req,res) =>{
+  //トップ画面を表示する処理
+  res.render('top.ejs');
+});
+</code></pre></div>
+<ul>
+<li>URLに対応する処理を実行する</li>
+<li>req(リクエストに関する情報),res(レスポンスに関する情報)を引数として受け取る</li>
+<li><em>req,resに入っている具体的な内容は？</em></li>
+<li>res.renderで指定したファイルを画面に表示させる</li>
+<li>最初にアクセスするページ（トップ画面）は、ルートURL('/')にする</li>
+<li>req,resはJavaScript標準（＝最初から用意されている）オブジェクト
+<ul>
+<li>req.body.name属性 等に値を保持できる仕組みは、reqというリクエストに関する情報をすべて入れるオブジェクトがあり、そこに新しいプロパティを追加しているというイメージ</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="主なパッケージ"><a href="#%E4%B8%BB%E3%81%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>主なパッケージ</h2>
+<ul>
+<li>
+<p>Express</p>
+<ul>
+<li>Node.jsでWebアプリを開発するためのフレームワーク
+<ul>
+<li>
+<h3 id="フレームワーク--骨組み"><a href="#%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF--%E9%AA%A8%E7%B5%84%E3%81%BF" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>フレームワーク ＝ 骨組み</h3>
+<ul>
+<li>システム開発時によく使う機能や設計などを予め用意してあるアプリケーション</li>
+</ul>
+</li>
+<li>
+<h3 id="ライブラリ--部品"><a href="#%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA--%E9%83%A8%E5%93%81" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>ライブラリ ＝ 部品</h3>
+<ul>
+<li>機能を持ったコードの集まり</li>
+</ul>
+</li>
+<li>
+<h3 id="パッケージ--部品を整理したもの"><a href="#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8--%E9%83%A8%E5%93%81%E3%82%92%E6%95%B4%E7%90%86%E3%81%97%E3%81%9F%E3%82%82%E3%81%AE" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>パッケージ ＝ 部品を整理したもの</h3>
+<ul>
+<li>ライブラリの中で、似ている機能をまとめたもの</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>使い方</li>
+</ul>
+<ol>
+<li>インストール(ターミナル)<br></li>
+</ol>
+<p><code>npm install express</code>
+2. インストールしたパッケージの読み込み(app.js)<br>
+<code>const express = require('express');</code>
+3. 使用する準備(app.js)<br>
+<code>const app = express();</code>
+4. サーバーの起動(app.js)<br>
+<code>app.listen(3000);</code></p>
+<ul>
+<li>localhost:3000でアクセス可能なサーバーを起動</li>
+</ul>
+<ol start="5">
+<li>app.jsの実行(ターミナル)<br></li>
+</ol>
+<p><code>node app.js</code></p>
+</li>
+<li>
+<p>EJS</p>
+<ul>
+<li>ブラウザに表示する見た目部分を定義</li>
+<li>役割としてはHTML</li>
+<li>HTMLとJavaScriptのコード両方を記述できるテンプレートエンジン
+<ul>
+<li><em>テンプレートエンジンとは？</em></li>
+</ul>
+</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>&lt;!DOCTYPE html>
+&lt;html>
+   &lt;head>
+       &lt;title>&lt;/title>
+       &lt;link rel = "stylesheet" href = "/css/style.css">
+       ...
+   &lt;/head>
+   &lt;body>
+       ...
+   &lt;/body>
+&lt;/html>
+</code></pre></div>
+<ul>
+<li>
+<p>cssや画像は、publicフォルダを起点としたパスを指定</p>
+</li>
+<li>
+<p>使い方</p>
+</li>
+</ul>
+<ol>
+<li>インストール(ターミナル)<br></li>
+</ol>
+<p><code>npm install ejs</code>
+2. JavaScriptコードの書き方</p>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>//変数の定義など、ブラウザに表示しない部分
+&lt;% %>
+
+//変数の値など、ブラウザに表示する部分
+&lt;%= %>
+</code></pre></div>
+<ol start="3">
+<li>フォームに初期値を表示<br></li>
+</ol>
+<ul>
+<li>value属性に値を指定すると初期値を表示できる</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>&lt;input value="&lt;%=item.name%>" type="text>
+</code></pre></div>
+</li>
+<li>
+<p>mysql</p>
+<ul>
+<li>Node.jsをMySQLに接続するパッケージ</li>
+<li>使い方</li>
+</ul>
+<ol>
+<li>インストール(ターミナル)<br></li>
+</ol>
+<p><code>npm install mysql</code>
+2. インストールしたパッケージの読み込み(app.js)<br>
+<code>const mysql = require('mysql');</code>
+3. 接続情報を代入(app.js)<br></p>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>const connection = mysql.createConnection({
+ //データベース名、パスワード等
+});
+</code></pre></div>
+<ol start="4">
+<li>クエリの実行(app.js)<br></li>
+</ol>
+<ul>
+<li>error : クエリが失敗したときのエラー情報</li>
+<li>results : クエリの実行結果</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>connection.query(
+ 'クエリ',
+ //クエリ実行後の処理
+ (error,results) =>{
+     console.log(results);
+     res.render('○○.ejs');
+ }
+);
+</code></pre></div>
+<ol start="5">
+<li>EJSへの値の受け渡し（データ表示など）</li>
+</ol>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>//app.js
+res.render('○○.ejs',{プロパティ名:値})
+</code></pre></div>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>//○○.ejs
+&lt;% プロパティ名 %>
+</code></pre></div>
+<ol start="6">
+<li>データベースを変更<br></li>
+</ol>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>//○○.ejs
+&lt;form action = "URL" method = "post">
+</code></pre></div>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>//app.js
+app.post('URL',(req,res) =>{
+
+})
+</code></pre></div>
+<ol start="7">
+<li>フォームの値を受け取る<br></li>
+</ol>
+<ul>
+<li>req.body.aaa(name属性)に入力値が入る</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>//○○.ejs
+&lt;form action = "URL" method = "post">
+ &lt;input type="" name="aaa">
+&lt;/form>
+</code></pre></div>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>//app.js
+//フォームの値を受け取るのに必要な定型文
+app.use(express.urlencoded({extended:false}));
+</code></pre></div>
+<ol start="8">
+<li>フォームからの値をクエリに使う(app.js)</li>
+</ol>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>connection.query(
+ 'クエリ(入力値を使う部分は「?」)',
+ [req.body.aaa(渡したい配列)],
+ (error,results) => {
+     //クエリ実行後の処理
+ }
+ );
+</code></pre></div>
+<ol start="9">
+<li>リダイレクト</li>
+</ol>
+<ul>
+<li>別のURLに再度リクエストさせる仕組み</li>
+<li>postのときによく使う（リロードによって繰り返しデータベースの変更処理が行われるのを防ぐため）</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>res.redirect('URL);
+</code></pre></div>
+<ol start="10">
+<li>ルートパラメータ</li>
+</ol>
+<ul>
+<li>URLを利用してデータを受け渡す</li>
+<li>req.params.ルートパラメータ名で値を受け取れる</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>//○○.ejs
+//送信先URLにメモのidを含める
+&lt;form action="/delete/&lt;%=item.id%>" method="post">
+</code></pre></div>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>//app.js
+//ルーティングURLにルートパラメータを指定
+app.post('/delete/:id',(req,res) =>{
+ //ルートパラメータの値を受け取ってコンソールに表示
+ console.log(req.params.id);
+});
+</code></pre></div>
+</li>
+<li>
+<p>express-session</p>
+<ul>
+<li>セッションを管理するための機能を提供するパッケージ</li>
+<li>使い方</li>
+</ul>
+<ol>
+<li>インストール(ターミナル)<br></li>
+</ol>
+<p><code>npm install express-session</code>
+2. インストールしたパッケージの読み込み(app.js)<br>
+<code>const session = require('express-session');</code>
+3. 使用する準備(app.js)<br></p>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>app.use(
+ session({
+     secret: 'my_secret_key',
+     resave: false,
+     saveUninitialized: false,
+ })
+)
+</code></pre></div>
+<ol start="4">
+<li>セッション情報にデータを保存</li>
+</ol>
+<ul>
+<li>req.session..プロパティ名 = 値</li>
+</ul>
+<ol start="5">
+<li>セッション情報を破棄</li>
+</ol>
+<ul>
+<li><code>req.session.destroy((error) => {実行後の処理})</code></li>
+<li>errorには削除処理が失敗したときの情報が入る</li>
+</ul>
+</li>
+<li>
+<p>bcrypt</p>
+<ul>
+<li>ハッシュ化するパッケージ</li>
+<li>使い方</li>
+</ul>
+<ol>
+<li>インストール(ターミナル)<br></li>
+</ol>
+<p><code>npm install bcrypt</code>
+2. インストールしたパッケージの読み込み (app.js)<br>
+<code>const bcrypt = require('bcrypt');</code>
+3. ハッシュ化(app.js)<br></p>
+<ul>
+<li>hash : ハッシュ化された文字列</li>
+<li>パスワードの強さ : 値が大きいほど強さ↑、処理速度↓</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>bcrypt.hash(文字列,パスワードの強さ,(error,hash) => {
+
+});
+</code></pre></div>
+<ol start="4">
+<li>ハッシュ化された文字列と普通の文字列を比較(app.js)<br></li>
+</ol>
+<ul>
+<li>plain : 普通の文字列</li>
+<li>hash : ハッシュ化された文字列</li>
+<li>isEqual : 比較結果（true/false）</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>bcrypt.compare(plain,hash,(error,isEqual) => {
+
+})
+</code></pre></div>
+</li>
+</ul>
+<h2 id="appuse関数"><a href="#appuse%E9%96%A2%E6%95%B0" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>app.use関数</h2>
+<ul>
+<li>全てのリクエストに対し、毎回実行される</li>
+<li>ルーティング処理の一番最初に書く</li>
+<li>next()で、リクエストに一致する次の処理（app.get等）を実行できる</li>
+<li><code>res.locals.プロパティ名 = 値</code>で値を代入すると、その値はレスポンスを返すまで使用可能になる
+<ul>
+<li>この値をEJSで使用する場合、<code>locals.プロパティ名</code>で使用可能</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>app.use((req,res,next) => {
+  res.locals.username = req.session.username;
+  next();
+});
+</code></pre></div>
+</li>
+</ul>
+<h2 id="ejsファイルで別のejsファイルを呼び出す"><a href="#ejs%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E5%88%A5%E3%81%AEejs%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%99" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>EJSファイルで別のEJSファイルを呼び出す</h2>
+<ul>
+<li>&lt;%- include('ファイル名'); %></li>
+</ul>
+<h2 id="ミドルウェア関数"><a href="#%E3%83%9F%E3%83%89%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%A2%E6%95%B0" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>ミドルウェア関数</h2>
+<ul>
+<li>リクエストとレスポンスの間にサーバーが実行する関数</li>
+<li>複数のミドルウェア関数をつくれる
+<ul>
+<li>app.use関数は、どのルーティングでも実行される</li>
+<li>ミドルウェア関数は、それを記述したルーティングのときに実行される</li>
+</ul>
+</li>
+<li>上から順に実行される
+<div class="nuxt-content-highlight"><pre class="language-text line-numbers"><code>app.post('URL',
+ (req,res,next) => {
+  処理１
+  next();
+ },
+ (req,res) => {
+  処理２
+ }
+);
+</code></pre></div>
+</li>
+</ul>
+<h2 id="デバッグのコツ"><a href="#%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%81%AE%E3%82%B3%E3%83%84" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>デバッグのコツ</h2>
+<ul>
+<li>console.logでとにかく表示して中身を見る</li>
+</ul></div></article></div></div><script>window.__NUXT__=function(e,p,t,a,l,r,y,s,n,u,d,i,c,v,o,h,g,E,m,N,x,A,b,j,q,f,B,H,L,U,I,R,S,C,J,_,F,k,T,w,P,M,D){return{layout:"default",data:[{page:{slug:"nodeJs",toc:[{id:R,depth:2,text:S},{id:f,depth:2,text:f},{id:C,depth:2,text:J},{id:B,depth:3,text:B},{id:H,depth:2,text:H},{id:_,depth:2,text:F},{id:k,depth:2,text:T},{id:L,depth:2,text:L},{id:U,depth:2,text:U}],body:{type:"root",children:[{type:p,tag:"h1",props:{id:"nodejs"},children:[{type:p,tag:o,props:{href:"#nodejs",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:"Node.js"}]},{type:e,value:t},{type:p,tag:x,props:{id:R},children:[{type:p,tag:o,props:{href:"#nodejs-%E3%81%A8%E3%81%AF",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:S}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"JavaScriptをサーバサイドで動かすための環境、仕組み"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"非同期処理により、大量のアクセスを高速に裁くことが可能\n"},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:t},{type:p,tag:b,props:{id:w},children:[{type:p,tag:o,props:{href:"#%E9%9D%9E%E5%90%8C%E6%9C%9F%E5%87%A6%E7%90%86",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:w}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"あるタスクを実行している最中に、その処理を止めることなく別のタスクを実行できる方式"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:t},{type:p,tag:"blockquote",props:{},children:[{type:e,value:t},{type:p,tag:v,props:{},children:[{type:e,value:"並行処理：複数の処理を1つの主体が切り替えながらこなすこと"},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:v,props:{},children:[{type:e,value:"並列処理：複数の処理を複数の主体で同時にこなすこと"},{type:p,tag:y,props:{},children:[]},{type:e,value:"\r\n同期処理：複数の処理をこなす際、ある処理が別の処理の終了を待つような処理"},{type:p,tag:y,props:{},children:[]},{type:e,value:"\r\n非同期処理：複数の処理をこなす際、ある処理は別の処理の終了を待たないような処理"},{type:p,tag:y,props:{},children:[]},{type:e,value:A},{type:p,tag:y,props:{},children:[]},{type:e,value:"\r\nそれぞれの言葉の目的"},{type:p,tag:y,props:{},children:[]},{type:e,value:"\r\n並行処理：処理を「同時に進行させる」ことが目的"},{type:p,tag:y,props:{},children:[]},{type:e,value:"\r\n並列処理：処理を「速くこなすこと」が目的"},{type:p,tag:y,props:{},children:[]},{type:e,value:"\r\n同期処理・非同期処理：別の処理を「待つ必要があるか・ないか」を語ることが目的"},{type:p,tag:y,props:{},children:[]},{type:e,value:A},{type:p,tag:o,props:{href:"https://qiita.com/kyabetsuda/items/384a57ff6b7250de40ad",rel:["nofollow","noopener","noreferrer"],target:"_blank"},children:[{type:e,value:"処理方式の違い"}]}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"モジュール機能により多数のパッケージが後悔されており、様々な機能を簡単に組み込むことが可能"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"パッケージやフレームワークはnpmからインストールして使用する"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:x,props:{id:f},children:[{type:p,tag:o,props:{href:"#%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E6%A7%8B%E6%88%90",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:f}]},{type:e,value:t},{type:p,tag:v,props:{},children:[{type:e,value:"list-app(親フォルダ)"}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"app.js"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"views (見た目に関するファイルを置く場所)\n"},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"top.ejs (ビューファイル)"}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"public (CSSや画像を置く場所)\n"},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"css (CSSを置く場所)"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"images (画像を置く場所)"}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:x,props:{id:C},children:[{type:p,tag:o,props:{href:"#appjs%E3%81%AE%E6%A7%8B%E6%88%90",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:J}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"//expressパッケージの準備\nconst express = require('express');\nconst app = express();\n\n//publicフォルダ内のファイルを読み込めるように設定\napp.use(express.static('public'));\n\n具体的な処理部分\n\n//サーバ起動\napp.listen(3000);\n"}]}]}]},{type:e,value:t},{type:p,tag:b,props:{id:B},children:[{type:p,tag:o,props:{href:"#%E5%87%A6%E7%90%86%E9%83%A8%E5%88%86%E3%81%AE%E4%B8%BB%E3%81%AA%E3%82%B3%E3%83%BC%E3%83%89",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:B}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"ルーティング\n"},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"app.get('/(URLを記入)', (req,res) =>{\n  //トップ画面を表示する処理\n  res.render('top.ejs');\n});\n"}]}]}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"URLに対応する処理を実行する"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"req(リクエストに関する情報),res(レスポンスに関する情報)を引数として受け取る"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:p,tag:"em",props:{},children:[{type:e,value:"req,resに入っている具体的な内容は？"}]}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"res.renderで指定したファイルを画面に表示させる"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"最初にアクセスするページ（トップ画面）は、ルートURL('/')にする"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"req,resはJavaScript標準（＝最初から用意されている）オブジェクト\n"},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"req.body.name属性 等に値を保持できる仕組みは、reqというリクエストに関する情報をすべて入れるオブジェクトがあり、そこに新しいプロパティを追加しているというイメージ"}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:x,props:{id:H},children:[{type:p,tag:o,props:{href:"#%E4%B8%BB%E3%81%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:H}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:t},{type:p,tag:v,props:{},children:[{type:e,value:"Express"}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"Node.jsでWebアプリを開発するためのフレームワーク\n"},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:t},{type:p,tag:b,props:{id:"フレームワーク--骨組み"},children:[{type:p,tag:o,props:{href:"#%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF--%E9%AA%A8%E7%B5%84%E3%81%BF",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:"フレームワーク ＝ 骨組み"}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"システム開発時によく使う機能や設計などを予め用意してあるアプリケーション"}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:t},{type:p,tag:b,props:{id:"ライブラリ--部品"},children:[{type:p,tag:o,props:{href:"#%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA--%E9%83%A8%E5%93%81",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:"ライブラリ ＝ 部品"}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"機能を持ったコードの集まり"}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:t},{type:p,tag:b,props:{id:"パッケージ--部品を整理したもの"},children:[{type:p,tag:o,props:{href:"#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8--%E9%83%A8%E5%93%81%E3%82%92%E6%95%B4%E7%90%86%E3%81%97%E3%81%9F%E3%82%82%E3%81%AE",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:"パッケージ ＝ 部品を整理したもの"}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"ライブラリの中で、似ている機能をまとめたもの"}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:j}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:c,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:q},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:v,props:{},children:[{type:p,tag:r,props:{},children:[{type:e,value:"npm install express"}]},{type:e,value:I},{type:p,tag:y,props:{},children:[]},{type:e,value:A},{type:p,tag:r,props:{},children:[{type:e,value:"const express = require('express');"}]},{type:e,value:P},{type:p,tag:y,props:{},children:[]},{type:e,value:A},{type:p,tag:r,props:{},children:[{type:e,value:"const app = express();"}]},{type:e,value:"\r\n4. サーバーの起動(app.js)"},{type:p,tag:y,props:{},children:[]},{type:e,value:A},{type:p,tag:r,props:{},children:[{type:e,value:"app.listen(3000);"}]}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"localhost:3000でアクセス可能なサーバーを起動"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:c,props:{start:5},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"app.jsの実行(ターミナル)"},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:v,props:{},children:[{type:p,tag:r,props:{},children:[{type:e,value:"node app.js"}]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:t},{type:p,tag:v,props:{},children:[{type:e,value:"EJS"}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"ブラウザに表示する見た目部分を定義"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"役割としてはHTML"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"HTMLとJavaScriptのコード両方を記述できるテンプレートエンジン\n"},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:p,tag:"em",props:{},children:[{type:e,value:"テンプレートエンジンとは？"}]}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:'<!DOCTYPE html>\n<html>\n   <head>\n       <title></title>\n       <link rel = "stylesheet" href = "/css/style.css">\n       ...\n   </head>\n   <body>\n       ...\n   </body>\n</html>\n'}]}]}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:t},{type:p,tag:v,props:{},children:[{type:e,value:"cssや画像は、publicフォルダを起点としたパスを指定"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:t},{type:p,tag:v,props:{},children:[{type:e,value:j}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:c,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:q},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:v,props:{},children:[{type:p,tag:r,props:{},children:[{type:e,value:"npm install ejs"}]},{type:e,value:"\r\n2. JavaScriptコードの書き方"}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"//変数の定義など、ブラウザに表示しない部分\n<% %>\n\n//変数の値など、ブラウザに表示する部分\n<%= %>\n"}]}]}]},{type:e,value:t},{type:p,tag:c,props:{start:3},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"フォームに初期値を表示"},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"value属性に値を指定すると初期値を表示できる"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:'<input value="<%=item.name%>" type="text>\n'}]}]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:t},{type:p,tag:v,props:{},children:[{type:e,value:"mysql"}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"Node.jsをMySQLに接続するパッケージ"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:j}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:c,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:q},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:v,props:{},children:[{type:p,tag:r,props:{},children:[{type:e,value:"npm install mysql"}]},{type:e,value:I},{type:p,tag:y,props:{},children:[]},{type:e,value:A},{type:p,tag:r,props:{},children:[{type:e,value:"const mysql = require('mysql');"}]},{type:e,value:"\r\n3. 接続情報を代入(app.js)"},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"const connection = mysql.createConnection({\n //データベース名、パスワード等\n});\n"}]}]}]},{type:e,value:t},{type:p,tag:c,props:{start:4},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"クエリの実行(app.js)"},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"error : クエリが失敗したときのエラー情報"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"results : クエリの実行結果"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"connection.query(\n 'クエリ',\n //クエリ実行後の処理\n (error,results) =>{\n     console.log(results);\n     res.render('○○.ejs');\n }\n);\n"}]}]}]},{type:e,value:t},{type:p,tag:c,props:{start:5},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"EJSへの値の受け渡し（データ表示など）"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"//app.js\nres.render('○○.ejs',{プロパティ名:値})\n"}]}]}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"//○○.ejs\n<% プロパティ名 %>\n"}]}]}]},{type:e,value:t},{type:p,tag:c,props:{start:6},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"データベースを変更"},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:'//○○.ejs\n<form action = "URL" method = "post">\n'}]}]}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"//app.js\napp.post('URL',(req,res) =>{\n\n})\n"}]}]}]},{type:e,value:t},{type:p,tag:c,props:{start:7},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"フォームの値を受け取る"},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"req.body.aaa(name属性)に入力値が入る"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:'//○○.ejs\n<form action = "URL" method = "post">\n <input type="" name="aaa">\n</form>\n'}]}]}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"//app.js\n//フォームの値を受け取るのに必要な定型文\napp.use(express.urlencoded({extended:false}));\n"}]}]}]},{type:e,value:t},{type:p,tag:c,props:{start:8},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"フォームからの値をクエリに使う(app.js)"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"connection.query(\n 'クエリ(入力値を使う部分は「?」)',\n [req.body.aaa(渡したい配列)],\n (error,results) => {\n     //クエリ実行後の処理\n }\n );\n"}]}]}]},{type:e,value:t},{type:p,tag:c,props:{start:9},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"リダイレクト"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"別のURLに再度リクエストさせる仕組み"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"postのときによく使う（リロードによって繰り返しデータベースの変更処理が行われるのを防ぐため）"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"res.redirect('URL);\n"}]}]}]},{type:e,value:t},{type:p,tag:c,props:{start:10},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"ルートパラメータ"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"URLを利用してデータを受け渡す"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"req.params.ルートパラメータ名で値を受け取れる"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:'//○○.ejs\n//送信先URLにメモのidを含める\n<form action="/delete/<%=item.id%>" method="post">\n'}]}]}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"//app.js\n//ルーティングURLにルートパラメータを指定\napp.post('/delete/:id',(req,res) =>{\n //ルートパラメータの値を受け取ってコンソールに表示\n console.log(req.params.id);\n});\n"}]}]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:t},{type:p,tag:v,props:{},children:[{type:e,value:"express-session"}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"セッションを管理するための機能を提供するパッケージ"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:j}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:c,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:q},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:v,props:{},children:[{type:p,tag:r,props:{},children:[{type:e,value:"npm install express-session"}]},{type:e,value:I},{type:p,tag:y,props:{},children:[]},{type:e,value:A},{type:p,tag:r,props:{},children:[{type:e,value:"const session = require('express-session');"}]},{type:e,value:P},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"app.use(\n session({\n     secret: 'my_secret_key',\n     resave: false,\n     saveUninitialized: false,\n })\n)\n"}]}]}]},{type:e,value:t},{type:p,tag:c,props:{start:4},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"セッション情報にデータを保存"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"req.session..プロパティ名 = 値"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:c,props:{start:5},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"セッション情報を破棄"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:p,tag:r,props:{},children:[{type:e,value:"req.session.destroy((error) => {実行後の処理})"}]}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"errorには削除処理が失敗したときの情報が入る"}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:t},{type:p,tag:v,props:{},children:[{type:e,value:"bcrypt"}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"ハッシュ化するパッケージ"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:j}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:c,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:q},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:v,props:{},children:[{type:p,tag:r,props:{},children:[{type:e,value:"npm install bcrypt"}]},{type:e,value:"\r\n2. インストールしたパッケージの読み込み (app.js)"},{type:p,tag:y,props:{},children:[]},{type:e,value:A},{type:p,tag:r,props:{},children:[{type:e,value:"const bcrypt = require('bcrypt');"}]},{type:e,value:"\r\n3. ハッシュ化(app.js)"},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:M}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"パスワードの強さ : 値が大きいほど強さ↑、処理速度↓"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"bcrypt.hash(文字列,パスワードの強さ,(error,hash) => {\n\n});\n"}]}]}]},{type:e,value:t},{type:p,tag:c,props:{start:4},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"ハッシュ化された文字列と普通の文字列を比較(app.js)"},{type:p,tag:y,props:{},children:[]}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"plain : 普通の文字列"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:M}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"isEqual : 比較結果（true/false）"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"bcrypt.compare(plain,hash,(error,isEqual) => {\n\n})\n"}]}]}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:x,props:{id:_},children:[{type:p,tag:o,props:{href:"#appuse%E9%96%A2%E6%95%B0",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:F}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"全てのリクエストに対し、毎回実行される"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"ルーティング処理の一番最初に書く"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"next()で、リクエストに一致する次の処理（app.get等）を実行できる"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:p,tag:r,props:{},children:[{type:e,value:"res.locals.プロパティ名 = 値"}]},{type:e,value:"で値を代入すると、その値はレスポンスを返すまで使用可能になる\n"},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"この値をEJSで使用する場合、"},{type:p,tag:r,props:{},children:[{type:e,value:"locals.プロパティ名"}]},{type:e,value:"で使用可能"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"app.use((req,res,next) => {\n  res.locals.username = req.session.username;\n  next();\n});\n"}]}]}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:x,props:{id:k},children:[{type:p,tag:o,props:{href:"#ejs%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E5%88%A5%E3%81%AEejs%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%99",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:T}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"<%- include('ファイル名'); %>"}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:x,props:{id:L},children:[{type:p,tag:o,props:{href:"#%E3%83%9F%E3%83%89%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%A2%E6%95%B0",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:L}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"リクエストとレスポンスの間にサーバーが実行する関数"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"複数のミドルウェア関数をつくれる\n"},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"app.use関数は、どのルーティングでも実行される"}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"ミドルウェア関数は、それを記述したルーティングのときに実行される"}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"上から順に実行される\n"},{type:p,tag:s,props:{className:[n]},children:[{type:p,tag:u,props:{className:[d,i]},children:[{type:p,tag:r,props:{},children:[{type:e,value:"app.post('URL',\n (req,res,next) => {\n  処理１\n  next();\n },\n (req,res) => {\n  処理２\n }\n);\n"}]}]}]},{type:e,value:t}]},{type:e,value:t}]},{type:e,value:t},{type:p,tag:x,props:{id:U},children:[{type:p,tag:o,props:{href:"#%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%81%AE%E3%82%B3%E3%83%84",ariaHidden:h,tabIndex:g},children:[{type:p,tag:E,props:{className:[m,N]},children:[]}]},{type:e,value:U}]},{type:e,value:t},{type:p,tag:l,props:{},children:[{type:e,value:t},{type:p,tag:a,props:{},children:[{type:e,value:"console.logでとにかく表示して中身を見る"}]},{type:e,value:t}]}]},dir:"/article",path:D,extension:".md",createdAt:"2023-01-12T13:31:46.414Z",updatedAt:"2022-08-26T08:50:23.000Z"}}],fetch:{},error:null,serverRendered:!0,routePath:D,config:{_app:{basePath:"/memo/",assetsPath:"/memo/_nuxt/",cdnURL:null},content:{dbHash:"1e3ba42c"}}}}("text","element","\n","li","ul","code","br","div","nuxt-content-highlight","pre","language-text","line-numbers","ol","p","a","true",-1,"span","icon","icon-link","h2","\r\n","h3","使い方","インストール(ターミナル)","フォルダ構成","処理部分の主なコード","主なパッケージ","ミドルウェア関数","デバッグのコツ","\r\n2. インストールしたパッケージの読み込み(app.js)","nodejs-とは","Node.js とは","appjsの構成","app.jsの構成","appuse関数","app.use関数","ejsファイルで別のejsファイルを呼び出す","EJSファイルで別のEJSファイルを呼び出す","非同期処理","\r\n3. 使用する準備(app.js)","hash : ハッシュ化された文字列","/article/nodeJs")</script><script src="/memo/_nuxt/8f8421a.js" defer></script><script src="/memo/_nuxt/24c5f03.js" defer></script><script src="/memo/_nuxt/12bbf66.js" defer></script><script src="/memo/_nuxt/e5ab36a.js" defer></script><script src="/memo/_nuxt/4644cec.js" defer></script>
+  </body>
+</html>
