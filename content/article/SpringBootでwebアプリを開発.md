@@ -10,7 +10,7 @@
 
 [spring initializr](https://start.spring.io/) で以下の設定をし、Generate
 
-![設定内容](create_spring_boot_project.png)
+![設定内容](../image/create_spring_boot_project.png)
 
 | 項目             | 選択                                                                                                 |
 | ---------------- | ---------------------------------------------------------------------------------------------------- |
