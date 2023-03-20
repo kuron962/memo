@@ -41,10 +41,22 @@
 
 - Mictosoft SQL Server Manegement Studio で操作。
 - sa アカウントで接続し、「データベース」を右クリック。新しいデータベースを作成。
-- 作成したデータベースを右クリック。新しいクエリでテーブル作成。
+- 作成したデータベースを右クリック。新しいクエリで SQL を作成し、実行してテーブル作成。
 - ログインユーザを sa 以外に作成し、ロールを分けるのがセキュリティ上よい。
 
-- application.properties に以下を記述。
+  - サーバーのセキュリティ - 新規作成 - ログイン
+  - ログイン名：DB ログインに使いたいアカウント名
+  - 「SQL Server 認証」を選択
+    - パスワードを設定
+    - 「パスワードポリシーを適用する」のチェックを外す
+  - 既定のデータベース：このアカウントで接続したい DB を選択
+  - ユーザーマッピング
+    - このログインにマップされたユーザー：このアカウントで接続したい DB にチェックを入れる
+    - データベースロールメンバーシップ：db_owner と public にチェックを入れる
+
+- src - main - resources - application.properties に以下を記述。これでアプリ起動時に DB に接続できる。
+  - SQL Server 構成マネージャー でポート番号を確認
+    - TCP/IP - プロパティ - IP アドレス - IPALL - TCP ポート
   - https://getpocket.com/ja/read/3812397575
   - https://blog.engineer-memo.com/2022/05/12/jdbc-runner-%E3%82%92-sql-server-%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A6%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E3%83%A1%E3%83%A2/
 
@@ -58,3 +70,50 @@ spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
 ## IntelliJ でプロジェクトを開く
 
 - IntelliJ で開きたいプロジェクトの build.gradle を開く
+
+## プロジェクトを実行
+
+- 表示 - ツールウィンドウ - Gradle - Tasks - application - bootRun
+- bootRun を右クリックし、デバッグ
+
+## バリデーションの実装
+
+- build.gradle に以下を記述。
+
+```
+implementation 'org.springframework.boot:spring-boot-starter-validation'
+```
+
+- バリデーションチェックを入れたい form の項目にアノテーションを追加
+
+```
+@NotBlank(message="タイトルを入力してください。")
+private String title;
+```
+
+- form でインポートする
+
+```
+import jakarta.validation.constraints.NotBlank;
+```
+
+- controller で@validated をつける
+
+```
+@PostMapping("/book-create")
+public String saveBook(@ModelAttribute @Validated BookForm bookForm, BindingResult result, Model model) {
+
+```
+
+## bootstrap の実装
+
+- build.gradle に以下を記述。
+
+```
+implementation 'org.webjars:bootstrap:5.2.2'
+```
+
+## Nuxt.js（フロントエンド）との接続
+
+- @Controller だとうまくいかない。@RestController を使うとうまくいく。
+- @RestController だと themeleaf は動かない。return の文字列がそのまま返ってくる。
