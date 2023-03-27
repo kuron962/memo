@@ -1,205 +1,297 @@
-/**
- * bodyタグ（文書本体）
- */
+/* MIT LICENSE
+Copyright (c) 2020 hachian
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/*//////////////////////////////////////////////*/
+/* common */
+/*//////////////////////////////////////////////*/
+
 body {
-  background-color: #ffffff;
-  color: #494949;
+  background-color: #e5e8e8;
+  color: #1b1b1b;
 }
 
-/**
- * codeタグ（コードテキスト）
- */
-code {
-  font-family: "Meiryo", Menlo, Monaco, Consolas, "Droid Sans Mono",
-    "Courier New", monospace, "Droid Sans Fallback";
-}
+/*//////////////////////////////////////////////*/
+/* title */
+/*//////////////////////////////////////////////*/
 
-/**
- * preタグ（整形済みテキスト）
- */
-pre {
-  font-family: "Meiryo", Menlo, Monaco, Consolas, "Droid Sans Mono",
-    "Courier New", monospace, "Droid Sans Fallback";
-}
-
-/**
- * blockquoteタグ（引用）
- */
-blockquote {
-  border-color: #ea5219;
-}
-
-/**
- * h1タグ（見出し1）
- */
 h1 {
-  color: #494949;
+  font-size: 36px;
   font-weight: bold;
-  border: solid 3px #ea5219;
-  padding: 0.5em;
-  border-radius: 0.5em;
+  padding: 20px 0;
 }
-
-/**
- * h2タグ（見出し2）
- */
 h2 {
-  color: #494949;
-  position: relative;
+  font-size: 22px;
   font-weight: bold;
-  margin: 0 0 1.5em;
-  padding: 0.5em 0.5em 0.5em 2.1em;
-  border-bottom: 2px solid #ea5219;
+  background-color: #33ad9d;
+  color: #e5e8e8;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 40px 0 10px;
 }
-h2:before {
-  content: "□";
-  font-size: 180%;
-  position: absolute;
-  color: #ea5219;
-  top: 0.15em;
-  left: 0.1em;
-  height: 12px;
-  width: 12px;
-}
-h2:after {
-  content: "□";
-  font-size: 120%;
-  position: absolute;
-  color: #000000;
-  top: 0.78em;
-  left: 0;
-  height: 12px;
-  width: 12px;
-}
-
-/**
- * h3タグ（見出し3）
- */
 h3 {
-  color: #494949;
-  padding: 0.5em 0.75em;
-  background-color: #f4f4f4;
-  border-left: 6px solid #ea5219;
-}
-
-/**
- * h4タグ（見出し4）
- */
-h4 {
-  color: #494949;
-  padding: 0.5em 0.75em;
-  background-color: #f4f4f4;
-  border-radius: 6px;
-}
-
-/**
- * h5タグ（見出し5）
- */
-h5 {
-  color: #494949;
-  padding: 0.5em 0.75em;
-  border-bottom-style: dotted;
-  border-bottom-color: #ea5219;
-  border-bottom-width: thin;
-}
-
-/**
- * tableタグ（表）
- */
-table thead th {
-  background: #ea5219;
+  font-size: 22px;
   font-weight: bold;
-  vertical-align: top;
-  color: #fff;
+  border-bottom: 3px solid #33ad9d;
+  margin: 40px 0 10px;
 }
-table th,
-table td {
-  padding: 6px 13px;
-  border: 1px solid #ddd;
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+  border-left: 3px solid #33ad9d;
+  margin: 40px 0 10px;
+  padding: 0 0 0 10px;
 }
-table tr {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-}
-table tr:nth-child(2n) {
-  background-color: #f8f8f8;
+h5 {
+  font-size: 16px;
+  margin: 40px 0 10px;
+  font-weight: bold;
 }
 
-/**
- * hrタグ（水平線）
- */
+/*//////////////////////////////////////////////*/
+/* tags */
+/*//////////////////////////////////////////////*/
+
 hr {
-  background-color: #fff;
-  border-color: #ea5219;
-  border-top: 1px dashed #ea5219;
+  height: 1px;
+  background-color: #b8bfbe;
+  margin: 20px 0;
+}
+em {
+  background: linear-gradient(transparent 80%, #e7ff46 80%);
+  padding: 0 5px;
+  font-style: normal;
+}
+strong {
+  background: linear-gradient(transparent 0%, #e7ff46 0%);
+  padding: 0 5px;
+  border-radius: 5px;
+}
+code {
+  display: inline-block;
+  padding: 0.1em 0.25em;
+  color: #e7edf3;
+  background-color: #272b2b;
+  border-radius: 5px;
+  font-family: Consolas, Menlo, Monaco, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Meiryo, monospace;
+}
+pre {
+  background-color: #272b2b !important;
+  border-radius: 5px;
 }
 
-/**
- * ulタグ（リスト）
- */
-ul li {
-  padding: 0px;
-  margin: 0px;
+/*//////////////////////////////////////////////*/
+/* list */
+/*//////////////////////////////////////////////*/
+
+ul,
+ol {
+  padding: 0 0 0.5em 1.5em;
 }
-ul li {
-  list-style-type: none !important;
-  list-style-image: none !important;
-  margin: 5px 0px 5px 0px !important;
-}
-ul li {
+ul > li,
+ol > li {
   position: relative;
-  padding-left: 20px;
+  list-style: none;
+  margin: 5px 0;
 }
-ul li:after {
+ul > li::after {
+  display: block;
   content: "";
+  position: absolute;
+  top: 0.5em;
+  left: -1em;
+  width: 6px;
+  height: 6px;
+  background-color: #33ad9d;
+  border-radius: 100%;
+}
+ul ul li::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0.75em;
+  left: -1em;
+  width: 6px;
+  height: 2px;
+  background-color: #33ad9d;
+}
+ul ul ul li::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: -1em;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #33ad9d;
+  border-bottom: 2px solid #33ad9d;
+  background-color: inherit;
+  border-radius: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* arrow */
+ul.arrow > li::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: -1em;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #33ad9d;
+  border-bottom: 2px solid #33ad9d;
+  background-color: inherit;
+  border-radius: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* check */
+ul.check > li::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: -1em;
+  width: 8px;
+  height: 3px;
+  border-left: 2px solid #33ad9d;
+  border-bottom: 2px solid #33ad9d;
+  background-color: inherit;
+  border-radius: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* ol */
+ol > li {
+  counter-increment: li;
+}
+ol > li::before {
+  content: counter(li);
   display: block;
   position: absolute;
-  background: #ea5219;
-  width: 9px;
-  height: 9px;
-  top: 5px;
-  left: 5px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-}
-
-/**
- * olタグ（順序リスト）
- */
-ol {
-  counter-reset: li;
-  padding: 0;
-  list-style: none;
-}
-ol li {
-  position: relative;
-  margin: 0 0 8px 4em;
-  padding: 2px 8px;
-}
-ol li:before {
-  content: counter(li);
-  counter-increment: li;
-  position: absolute;
-  top: -2px;
-  left: -2em;
-  width: 2em;
-  padding: 3px 0;
-  color: #fff;
-  background: #ea5219;
+  top: 0.3em;
+  left: -1em;
+  color: #33ad9d;
+  font-size: 14px;
+  line-height: 1;
   font-weight: bold;
-  text-align: center;
-  border-radius: 20px;
 }
 
-/**
- * aタグ（リンク）
- */
-a {
-  color: #4078c0;
-  text-decoration: none;
+/*//////////////////////////////////////////////*/
+/* table */
+/*//////////////////////////////////////////////*/
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #b7bdbc !important;
+  line-height: 1.5;
+  margin: 10px 0;
+  width: 100%;
 }
-a:hover,
-a:active {
-  text-decoration: underline;
+table th {
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: top;
+  text-align: left;
+  background: #c6cbca;
+  border: 1px solid #b7bdbc !important;
+}
+table td {
+  font-size: 12px;
+  padding: 10px;
+  vertical-align: top;
+  border: 1px solid #b7bdbc !important;
+}
+
+/* stripe */
+table.stripe tr:nth-child(even) {
+  background: #dcdfdf;
+}
+
+/* dark th */
+table.dark th {
+  color: #e5e8e8;
+  background: #272b2b;
+}
+
+/*//////////////////////////////////////////////*/
+/* box */
+/*//////////////////////////////////////////////*/
+
+.box_gray {
+  background: #dcdfdf;
+  border: 2px solid #b8bfbe;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 1em;
+}
+
+.box_pink {
+  background: #e7d5d5;
+  border: 2px solid #d47e7e;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 1em;
+}
+
+.box_pink ul,
+.box_pink ol {
+  padding: 0 0 0 1.5em;
+}
+.box_pink ol > li::before {
+  content: counter(li);
+  display: block;
+  position: absolute;
+  top: 0.3em;
+  left: -1em;
+  color: #d47e7e;
+  line-height: 1;
+  font-weight: bold;
+}
+.box_pink ul > li::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: -1em;
+  width: 6px;
+  height: 6px;
+  background-color: #d47e7e;
+  border-radius: 100%;
+}
+
+.box_gray ul,
+.box_gray ol {
+  padding: 0 0 0 1.5em;
+}
+.box_gray ol > li::before {
+  content: counter(li);
+  display: block;
+  position: absolute;
+  top: 0.3em;
+  left: -1em;
+  color: #b8bfbe;
+  line-height: 1;
+  font-weight: bold;
+}
+.box_gray ul > li::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: -1em;
+  width: 6px;
+  height: 6px;
+  background-color: #b8bfbe;
+  border-radius: 100%;
 }
