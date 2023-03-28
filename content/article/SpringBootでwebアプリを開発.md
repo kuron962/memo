@@ -55,17 +55,18 @@
     - データベースロールメンバーシップ：db_owner と public にチェックを入れる
 
 - src - main - resources - application.properties に以下を記述。これでアプリ起動時に DB に接続できる。
+
   - SQL Server 構成マネージャー でポート番号を確認
     - TCP/IP - プロパティ - IP アドレス - IPALL - TCP ポート
   - https://getpocket.com/ja/read/3812397575
   - https://blog.engineer-memo.com/2022/05/12/jdbc-runner-%E3%82%92-sql-server-%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A6%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E3%83%A1%E3%83%A2/
 
-```
-spring.datasource.url=jdbc:sqlserver://localhost:{ポート番号};databaseName={DB名};encrypt=false
-spring.datasource.username={ログインユーザ名}
-spring.datasource.password={パスワード}
-spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
-```
+  ```
+  spring.datasource.url=jdbc:sqlserver://localhost:{ポート番号};databaseName={DB名};encrypt=false
+  spring.datasource.username={ログインユーザ名}
+  spring.datasource.password={パスワード}
+  spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+  ```
 
 ## IntelliJ でプロジェクトを開く
 
