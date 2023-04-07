@@ -1,6 +1,6 @@
 # BOOKSHELF 開発でのつまづき
 
-### DB を使わないデータ保持の方法
+### DB を使わずにデータを保持する
 
 #### やりたかったこと
 
@@ -17,6 +17,40 @@
   |localStorage | 一度入力したらずっと保持してほしいデータ<br>セキュリティ上の責任から、ローカルに保持したいデータ|バックアップデータの保存先 URL（保存先をクラウドにするとなったら必要）<br>登録済の書籍情報|
   |Store|一時的に保持したいデータ<br>リロードしたら消えて OK なデータ|書影 API からの検索結果<br>捜査対象の書籍情報|
   |csv ファイル|人と共有したいデータ<br>異なるデバイス間で共有したいデータ|登録済みの書籍情報|
+
+### 選択したファイルの中身を取り出す
+
+#### 発生事案
+
+以下コードで reader.result が null になる
+
+```
+selectFile(event) {
+  let result = event.target.files[0];
+  let reader = new FileReader();
+  reader.readAsText(result);
+  this.file = reader.result;
+},
+```
+
+#### 原因
+
+- readAsText は非同期処理のため、読み取り中に読み取り結果にアクセスしようとして null になっていた
+
+#### 解決方法
+
+- reader.onload の中に、読み取り後の処理を書く
+
+```
+selectFile(event) {
+  let result = event.target.files[0];
+  let reader = new FileReader();
+  reader.readAsText(result);
+  reader.onload = () => {
+    this.file = reader.result;
+  };
+},
+```
 
 ### データを csv データに変換する
 
@@ -124,6 +158,12 @@ link.click();
 link.remove();
 ```
 
+### csv で、配列の中に配列がある場合に、うまく json 化できない
+
+- 区切り文字が、[]内の区切り文字も認識されてしまう。
+- 無視したいができない
+- ひとまず、元データのほうを１次元配列になるよう修正
+
 ### localStorage と Store 間のデータ受け渡し
 
 - localSrorage はすべてのデータを文字列化して保存しているため、オブジェクトをそのまま保存することができない
@@ -139,3 +179,16 @@ JSON.parse(localStorage.getItem("key名"));
 ```
 JSON.stringify(data);
 ```
+
+### Nuxt アプリを Netlify で公開する
+
+#### 参考サイト
+
+https://zenn.dev/shu00011/articles/0e5937ca1ff85b
+
+#### dist フォルダを git 管理の対象にする
+
+- 上記参考サイトの通り進めたが、ビルドに失敗した
+- エラーを確認したところ、dist フォルダがないと言われている
+- dist フォルダは git の管理対象外となっていたため、変更が反映されていなかった
+- .gitignore ファイルから dist を消して commit と push をした後、retry することで解消
